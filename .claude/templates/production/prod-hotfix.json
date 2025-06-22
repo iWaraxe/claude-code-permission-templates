@@ -1,0 +1,35 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(**/*)",
+      "Edit(src/**/*.{js,ts,java,py})",
+      "Edit(hotfix-*.patch)",
+      "Create(hotfix/**/*)",
+      "Bash(git checkout -b hotfix/*)",
+      "Bash(git diff *)",
+      "Bash(git add src/*)",
+      "Bash(git commit -m 'HOTFIX: *')",
+      "Bash(git log -10)",
+      "Bash(npm test -- --testNamePattern=*)",
+      "Bash(npm run test:unit)",
+      "Bash(grep -r * src/)"
+    ],
+    "deny": [
+      "Edit(package*.json)",
+      "Edit(pom.xml)",
+      "Edit(build.gradle)",
+      "Edit(.github/**/*)",
+      "Edit(infrastructure/**/*)",
+      "Bash(npm install *)",
+      "Bash(rm -rf *)",
+      "Bash(git push --force *)",
+      "Bash(npm run deploy:prod)"
+    ]
+  },
+  "env": {
+    "ENVIRONMENT": "production",
+    "HOTFIX_MODE": "true",
+    "REQUIRE_REVIEW": "true",
+    "AUDIT_ALL_CHANGES": "true"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(**)"
+    ],
+    "deny": [
+      "Edit(~/**)",
+      "Edit(/etc/**)",
+      "Edit(C:\\**)",
+      "Bash(sudo*)",
+      "Bash(su *)",
+      "Bash(chmod *)",
+      "Bash(chown *)",
+      "Bash(rm *)",
+      "Bash(mv *)",
+      "Bash(cp * /)",
+      "Bash(dd *)",
+      "Bash(format *)",
+      "Bash(:(){ :|:& };:)",
+      "WebFetch(*)"
+    ]
+  },
+  "env": {
+    "RESTRICTED_MODE": "true",
+    "AUDIT_ALL": "true"
+  }
+}

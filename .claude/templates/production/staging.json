@@ -1,0 +1,35 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(**/*)",
+      "Edit(src/**/*)",
+      "Edit(tests/**/*)",
+      "Edit(config/staging.*)",
+      "Create(staging-logs/**/*)",
+      "Write(staging-reports/**/*)",
+      "Bash(npm *)",
+      "Bash(yarn *)",
+      "Bash(git *)",
+      "Bash(docker *)",
+      "Bash(docker-compose -f docker-compose.staging.yml *)",
+      "Bash(kubectl --context=staging *)",
+      "Bash(curl *)",
+      "Bash(wget *)"
+    ],
+    "deny": [
+      "Edit(.env.production)",
+      "Edit(config/production.*)",
+      "Edit(secrets/**/*)",
+      "Bash(kubectl --context=production *)",
+      "Bash(docker-compose -f docker-compose.prod.yml *)",
+      "Bash(npm run deploy:prod)",
+      "Bash(git push origin main)",
+      "Bash(git push origin master)"
+    ]
+  },
+  "env": {
+    "ENVIRONMENT": "staging",
+    "NODE_ENV": "staging",
+    "DEBUG": "true"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(**)",
+      "Edit(src/**/*.{js,jsx,ts,tsx})",
+      "Edit(tests/**/*)",
+      "Bash(npm test)",
+      "Bash(npm run lint)",
+      "Bash(git status)",
+      "Bash(git diff)",
+      "Bash(git add *)",
+      "Bash(git commit *)"
+    ],
+    "deny": [
+      "Edit(package.json)",
+      "Edit(package-lock.json)",
+      "Edit(yarn.lock)",
+      "Edit(.github/**/*)",
+      "Edit(infrastructure/**/*)",
+      "Bash(npm install *)",
+      "Bash(npm uninstall *)",
+      "Bash(npm publish)",
+      "Bash(git push *)",
+      "Bash(git merge *)",
+      "Bash(git rebase *)"
+    ]
+  },
+  "env": {
+    "NODE_ENV": "development",
+    "JUNIOR_MODE": "true"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(src/**/*)",
+      "Read(docs/**/*)",
+      "Read(tests/**/*)",
+      "Edit(src/**/*.{java,xml})",
+      "Edit(src/test/**/*)",
+      "Bash(mvn test*)",
+      "Bash(mvn compile)",
+      "Bash(git status)",
+      "Bash(git diff)",
+      "Bash(git log *)"
+    ],
+    "deny": [
+      "Edit(pom.xml)",
+      "Edit(.github/**/*)",
+      "Edit(infrastructure/**/*)",
+      "Edit(deployment/**/*)",
+      "Bash(mvn deploy*)",
+      "Bash(mvn release*)",
+      "Bash(docker *)",
+      "Bash(kubectl *)",
+      "Bash(aws *)",
+      "Bash(terraform *)"
+    ]
+  },
+  "env": {
+    "ENVIRONMENT": "development",
+    "COMPLIANCE_MODE": "SOX",
+    "AUDIT_LEVEL": "high",
+    "CHANGE_CONTROL": "enabled"
+  }
+}

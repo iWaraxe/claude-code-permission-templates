@@ -1,0 +1,39 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(**/*)",
+      "Edit(test-results/**/*)",
+      "Edit(coverage/**/*)",
+      "Edit(reports/**/*)",
+      "Write(.test-cache/**/*)",
+      "Bash(npm ci)",
+      "Bash(npm run test:ci)",
+      "Bash(npm run test:parallel)",
+      "Bash(npm run lint:ci)",
+      "Bash(npm run build:test)",
+      "Bash(docker run --rm *)",
+      "Bash(docker-compose -f docker-compose.test.yml *)",
+      "Bash(allure generate *)",
+      "Bash(junit-viewer *)",
+      "Bash(lighthouse *)",
+      "Bash(pa11y *)"
+    ],
+    "deny": [
+      "Edit(src/**/*)",
+      "Edit(package*.json)",
+      "Bash(npm install *)",
+      "Bash(read *)",
+      "Bash(sudo *)",
+      "Bash(ssh *)",
+      "Bash(scp *)"
+    ]
+  },
+  "env": {
+    "CI": "true",
+    "NODE_ENV": "test",
+    "HEADLESS": "true",
+    "PARALLEL_WORKERS": "4",
+    "FAIL_FAST": "false",
+    "NO_INTERACTIVE": "true"
+  }
+}

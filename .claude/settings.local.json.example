@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Edit(personal-scripts/**/*)",
+      "Bash(my-custom-tool *)"
+    ]
+  },
+  "env": {
+    "MY_API_KEY": "your-key-here",
+    "PERSONAL_DEBUG": "true"
+  }
+}

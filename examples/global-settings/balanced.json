@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(**)",
+      "Bash(git *)",
+      "Bash(ls *)",
+      "Bash(cat *)",
+      "Bash(grep *)"
+    ],
+    "deny": [
+      "Bash(:(){ :|:& };:)",
+      "Bash(rm -rf /)",
+      "Bash(sudo rm -rf *)",
+      "Edit(~/.ssh/**)",
+      "Edit(/etc/**)",
+      "Edit(C:\\Windows\\**)",
+      "Bash(format *)",
+      "Bash(fdisk *)"
+    ]
+  },
+  "env": {
+    "CLAUDE_CODE_ENABLE_TELEMETRY": "1"
+  }
+}

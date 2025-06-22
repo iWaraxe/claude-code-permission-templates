@@ -1,0 +1,46 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(**)",
+      "Edit(src/**/*)",
+      "Edit(tests/**/*)",
+      
+      // Cross-platform commands
+      "Bash(npm *)",
+      "Bash(node *)",
+      "Bash(python *)",
+      "Bash(git *)",
+      
+      // Unix-specific (Git Bash on Windows)
+      "Bash(grep *)",
+      "Bash(find *)",
+      "Bash(tail *)",
+      
+      // Windows-specific
+      "Bash(dir *)",
+      "Bash(findstr *)",
+      "Bash(where *)",
+      
+      // PowerShell
+      "Bash(Get-ChildItem *)",
+      "Bash(Select-String *)"
+    ],
+    "deny": [
+      // Unix dangerous
+      "Bash(rm -rf /)",
+      "Bash(:(){ :|:& };:)",
+      
+      // Windows dangerous
+      "Bash(format *)",
+      "Bash(del /f /s /q C:\\*)",
+      
+      // Cross-platform dangerous
+      "Edit(.env.production)",
+      "Edit(secrets/**)"
+    ]
+  },
+  "env": {
+    "CROSS_PLATFORM": "true",
+    "NODE_ENV": "development"
+  }
+}

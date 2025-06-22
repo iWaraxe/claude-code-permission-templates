@@ -1,0 +1,41 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(**/*)",
+      "Edit(e2e/**/*)",
+      "Edit(tests/e2e/**/*)",
+      "Edit(cypress/**/*)",
+      "Edit(playwright/**/*)",
+      "Edit(test-data/**/*)",
+      "Create(screenshots/**/*)",
+      "Create(videos/**/*)",
+      "Create(test-results/**/*)",
+      "Write(reports/**/*)",
+      "Bash(npm run e2e*)",
+      "Bash(cypress *)",
+      "Bash(playwright *)",
+      "Bash(npm start)",
+      "Bash(npm run dev)",
+      "Bash(docker-compose up *)",
+      "Bash(docker-compose down *)",
+      "Bash(wait-on *)",
+      "Bash(start-server-and-test *)"
+    ],
+    "deny": [
+      "Edit(src/**/*)",
+      "Edit(package.json)",
+      "Edit(.env.production)",
+      "Bash(npm install *)",
+      "Bash(npm run deploy*)",
+      "Bash(docker-compose -f docker-compose.prod.yml *)"
+    ]
+  },
+  "env": {
+    "NODE_ENV": "test",
+    "E2E_MODE": "true",
+    "HEADLESS": "true",
+    "BROWSER": "chrome",
+    "VIEWPORT_WIDTH": "1280",
+    "VIEWPORT_HEIGHT": "720"
+  }
+}

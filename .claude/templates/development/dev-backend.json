@@ -1,0 +1,51 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(**)",
+      "Edit(src/**/*.{js,ts,java,py,go,rs,php})",
+      "Edit(server/**/*)",
+      "Edit(backend/**/*)",
+      "Edit(api/**/*)",
+      "Edit(database/**/*)",
+      "Edit(migrations/**/*)",
+      "Edit(tests/**/*)",
+      "Edit(package.json)",
+      "Edit(pom.xml)",
+      "Edit(build.gradle)",
+      "Edit(requirements.txt)",
+      "Edit(Cargo.toml)",
+      "Edit(go.mod)",
+      "Edit(composer.json)",
+      "Edit(Dockerfile)",
+      "Edit(docker-compose*.yml)",
+      "Bash(npm *)",
+      "Bash(yarn *)",
+      "Bash(mvn *)",
+      "Bash(gradle *)",
+      "Bash(python *)",
+      "Bash(pip *)",
+      "Bash(go *)",
+      "Bash(cargo *)",
+      "Bash(php *)",
+      "Bash(composer *)",
+      "Bash(git *)",
+      "Bash(docker *)",
+      "Bash(docker-compose *)"
+    ],
+    "deny": [
+      "Edit(public/**/*)",
+      "Edit(assets/**/*)",
+      "Edit(components/**/*)",
+      "Edit(pages/**/*)",
+      "Edit(styles/**/*)",
+      "Edit(.env.production)",
+      "Edit(secrets/**/*)",
+      "Bash(kubectl apply *)",
+      "Bash(terraform apply *)"
+    ]
+  },
+  "env": {
+    "NODE_ENV": "development",
+    "BACKEND_ONLY": "true"
+  }
+}

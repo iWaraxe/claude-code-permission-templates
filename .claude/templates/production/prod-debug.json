@@ -1,0 +1,46 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(**/*)",
+      "Create(debug-logs/**/*)",
+      "Write(debug-reports/**/*)",
+      "Edit(temp-debug/**/*)",
+      "Bash(tail -f logs/*)",
+      "Bash(grep * logs/*)",
+      "Bash(find logs/ -name *)",
+      "Bash(cat logs/*)",
+      "Bash(less logs/*)",
+      "Bash(ps aux)",
+      "Bash(top)",
+      "Bash(htop)",
+      "Bash(netstat *)",
+      "Bash(ss *)",
+      "Bash(docker ps)",
+      "Bash(docker logs *)",
+      "Bash(docker exec * /bin/sh -c 'ps aux')",
+      "Bash(kubectl get *)",
+      "Bash(kubectl describe *)",
+      "Bash(kubectl logs *)",
+      "Bash(kubectl exec * -- ps aux)",
+      "Bash(curl -X GET *)",
+      "Bash(strace -p *)",
+      "Bash(gdb -p *)"
+    ],
+    "deny": [
+      "Edit(src/**/*)",
+      "Edit(config/**/*)",
+      "Edit(.env*)",
+      "Bash(rm -rf *)",
+      "Bash(docker exec * rm *)",
+      "Bash(kubectl delete *)",
+      "Bash(curl -X POST|PUT|DELETE|PATCH *)",
+      "Bash(kill -9 *)",
+      "Bash(killall *)"
+    ]
+  },
+  "env": {
+    "ENVIRONMENT": "production",
+    "DEBUG_MODE": "true",
+    "AUDIT_ALL_COMMANDS": "true"
+  }
+}

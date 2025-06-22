@@ -1,0 +1,29 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(**/*)",
+      "Edit(migrations/**/*)",
+      "Edit(scripts/migrate-*.js)",
+      "Create(migrations/**/*)",
+      "Create(backups/**/*)",
+      "Bash(npm run db:migrate:*)",
+      "Bash(npx sequelize *)",
+      "Bash(npx knex *)",
+      "Bash(npx prisma migrate *)",
+      "Bash(mongodump *)",
+      "Bash(mongorestore *)",
+      "Bash(pg_dump *)"
+    ],
+    "deny": [
+      "Edit(src/**/*)",
+      "Bash(drop database *)",
+      "Bash(dropdb *)",
+      "Bash(rm -rf backups/*)"
+    ]
+  },
+  "env": {
+    "MIGRATION_MODE": "true",
+    "REQUIRE_BACKUP": "true",
+    "DRY_RUN_DEFAULT": "true"
+  }
+}

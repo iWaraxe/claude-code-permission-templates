@@ -1,0 +1,45 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(**)",
+      "Edit(src/**/*)",
+      "Edit(tests/**/*)",
+      "Edit(docs/**/*)",
+      "Edit(package.json)",
+      "Edit(pom.xml)",
+      "Edit(build.gradle)",
+      "Edit(Dockerfile)",
+      "Edit(docker-compose*.yml)",
+      "Create(**/*)",
+      "Write(**/*)",
+      "Bash(npm *)",
+      "Bash(yarn *)",
+      "Bash(pnpm *)",
+      "Bash(git *)",
+      "Bash(docker *)",
+      "Bash(docker-compose *)",
+      "Bash(make *)",
+      "Bash(gradle *)",
+      "Bash(mvn *)",
+      "Bash(python *)",
+      "Bash(pip *)",
+      "Bash(node *)",
+      "Bash(curl *)",
+      "Bash(wget *)"
+    ],
+    "deny": [
+      "Edit(.env.production)",
+      "Edit(secrets/**/*)",
+      "Bash(rm -rf /)",
+      "Bash(:(){ :|:& };:)",
+      "Bash(git push --force master)",
+      "Bash(git push --force main)",
+      "Edit(~/.ssh/id_rsa*)",
+      "Bash(sudo rm -rf *)"
+    ]
+  },
+  "env": {
+    "NODE_ENV": "development",
+    "DEBUG": "true"
+  }
+}

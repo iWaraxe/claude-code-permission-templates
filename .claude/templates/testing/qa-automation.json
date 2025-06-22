@@ -1,0 +1,40 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(**/*)",
+      "Edit(tests/**/*)",
+      "Edit(e2e/**/*)",
+      "Edit(cypress/**/*)",
+      "Edit(playwright/**/*)",
+      "Edit(test-reports/**/*)",
+      "Create(screenshots/**/*)",
+      "Create(videos/**/*)",
+      "Write(coverage/**/*)",
+      "Bash(npm test*)",
+      "Bash(npm run e2e*)",
+      "Bash(jest *)",
+      "Bash(mocha *)",
+      "Bash(cypress *)",
+      "Bash(playwright *)",
+      "Bash(selenium *)",
+      "Bash(webdriver *)",
+      "Bash(newman *)",
+      "Bash(k6 run *)",
+      "Bash(artillery *)"
+    ],
+    "deny": [
+      "Edit(src/**/*)",
+      "Edit(package.json)",
+      "Bash(npm install *)",
+      "Bash(npm publish)",
+      "Bash(rm -rf test-reports)",
+      "Bash(rm -rf coverage)"
+    ]
+  },
+  "env": {
+    "NODE_ENV": "test",
+    "CI": "true",
+    "HEADLESS": "true",
+    "TEST_TIMEOUT": "30000"
+  }
+}

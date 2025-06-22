@@ -1,0 +1,29 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(**/*)",
+      "Bash(git diff *)",
+      "Bash(git log *)",
+      "Bash(git show *)",
+      "Bash(git blame *)",
+      "Bash(grep -r *)",
+      "Bash(find * -name *)",
+      "Edit(reviews/**/*.md)",
+      "Create(reviews/**/*)"
+    ],
+    "deny": [
+      "Edit(src/**/*)",
+      "Edit(tests/**/*)",
+      "Bash(git commit *)",
+      "Bash(git push *)",
+      "Bash(git merge *)",
+      "Bash(git rebase *)",
+      "Bash(npm *)",
+      "Bash(yarn *)"
+    ]
+  },
+  "env": {
+    "REVIEW_MODE": "true",
+    "READ_ONLY_SOURCE": "true"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "deny": [
+      "Bash(rm -rf /)",
+      "Bash(:(){ :|:& };:)",
+      "Edit(~/.ssh/id_rsa*)",
+      "Edit(/etc/*)",
+      "Bash(sudo rm -rf *)",
+      "Bash(chmod 777 /)"
+    ]
+  },
+  "env": {
+    "GLOBAL_SECURITY_LEVEL": "minimal"
+  }
+}

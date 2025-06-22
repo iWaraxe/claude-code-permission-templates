@@ -1,0 +1,35 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(**)",
+      "Edit(src/**/*)",
+      "Edit(tests/**/*)",
+      "Edit(docs/**/*)",
+      "Edit(package.json)",
+      "Edit(README.md)",
+      "Create(**/*)",
+      "Bash(npm *)",
+      "Bash(git *)",
+      "Bash(heroku *)",
+      "Bash(vercel *)",
+      "Bash(netlify *)"
+    ],
+    "deny": [
+      "Edit(.env.production)",
+      "Edit(secrets/**)",
+      "Bash(rm -rf node_modules)",
+      "Bash(git push --force main)"
+    ]
+  },
+  "env": {
+    "STARTUP_MODE": "true",
+    "FAST_ITERATION": "true"
+  },
+  "mcpServers": {
+    "github": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-github"]
+    }
+  }
+}

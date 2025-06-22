@@ -1,0 +1,44 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(**/*)",
+      "Bash(tail -f logs/*)",
+      "Bash(grep * logs/*)",
+      "Bash(find logs/ -name *)",
+      "Bash(cat logs/*)",
+      "Bash(less logs/*)",
+      "Bash(ps aux)",
+      "Bash(top)",
+      "Bash(htop)",
+      "Bash(df -h)",
+      "Bash(free -m)",
+      "Bash(netstat *)",
+      "Bash(ss *)",
+      "Bash(docker ps)",
+      "Bash(docker logs *)",
+      "Bash(kubectl get *)",
+      "Bash(kubectl describe *)",
+      "Bash(kubectl logs *)",
+      "Bash(curl -X GET *)"
+    ],
+    "deny": [
+      "Edit(*)",
+      "Create(*)",
+      "Write(*)",
+      "Bash(rm *)",
+      "Bash(mv *)",
+      "Bash(cp *)",
+      "Bash(docker exec *)",
+      "Bash(kubectl exec *)",
+      "Bash(kubectl delete *)",
+      "Bash(curl -X POST|PUT|DELETE|PATCH *)",
+      "Bash(ssh *)",
+      "Bash(scp *)"
+    ]
+  },
+  "env": {
+    "ENVIRONMENT": "production",
+    "READ_ONLY": "true",
+    "AUDIT_MODE": "true"
+  }
+}

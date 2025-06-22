@@ -1,0 +1,28 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(**/*)",
+      "Edit(docs/**/*)",
+      "Edit(README.md)",
+      "Edit(*.md)",
+      "Edit(examples/**/*)",
+      "Create(docs/**/*)",
+      "Bash(npm run docs:*)",
+      "Bash(mkdocs *)",
+      "Bash(hugo *)",
+      "Bash(jekyll *)",
+      "Bash(mdbook *)"
+    ],
+    "deny": [
+      "Edit(src/**/*)",
+      "Edit(tests/**/*)",
+      "Edit(package.json)",
+      "Bash(npm install *)",
+      "Bash(npm publish)"
+    ]
+  },
+  "env": {
+    "DOCS_ONLY": "true",
+    "LIVE_PREVIEW": "true"
+  }
+}

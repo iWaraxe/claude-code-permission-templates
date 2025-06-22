@@ -1,0 +1,36 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(**/*)",
+      "Edit(performance/**/*)",
+      "Edit(load-tests/**/*)",
+      "Create(performance-reports/**/*)",
+      "Write(metrics/**/*)",
+      "Bash(k6 run *)",
+      "Bash(artillery *)",
+      "Bash(ab *)",
+      "Bash(wrk *)",
+      "Bash(jmeter *)",
+      "Bash(lighthouse *)",
+      "Bash(npm run perf*)",
+      "Bash(npm run benchmark*)",
+      "Bash(node --prof *)",
+      "Bash(clinic *)",
+      "Bash(0x *)"
+    ],
+    "deny": [
+      "Edit(src/**/*)",
+      "Edit(package.json)",
+      "Edit(.env.production)",
+      "Bash(npm install *)",
+      "Bash(rm -rf performance-reports)",
+      "Bash(rm -rf metrics)"
+    ]
+  },
+  "env": {
+    "NODE_ENV": "test",
+    "PERFORMANCE_MODE": "true",
+    "MAX_CONCURRENT_USERS": "100",
+    "TEST_DURATION": "60s"
+  }
+}

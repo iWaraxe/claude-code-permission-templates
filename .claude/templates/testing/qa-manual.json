@@ -1,0 +1,42 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(**/*)",
+      "Edit(test-data/**/*)",
+      "Edit(test-cases/**/*)",
+      "Edit(bug-reports/**/*)",
+      "Edit(screenshots/**/*)",
+      "Create(test-results/**/*)",
+      "Write(test-logs/**/*)",
+      "Bash(npm start)",
+      "Bash(npm run dev)",
+      "Bash(npm run test:manual)",
+      "Bash(curl *)",
+      "Bash(wget *)",
+      "Bash(open *)",
+      "Bash(start *)",
+      "Bash(explorer *)",
+      "Bash(xdg-open *)",
+      "Bash(sqlite3 test.db *)",
+      "Bash(psql -d test_* *)",
+      "Bash(mongo test_* *)",
+      "Bash(redis-cli -n 1 *)"
+    ],
+    "deny": [
+      "Edit(src/**/*)",
+      "Edit(.env.production)",
+      "Edit(secrets/**/*)",
+      "Bash(drop database *)",
+      "Bash(truncate *)",
+      "Bash(npm run deploy*)",
+      "Bash(npm run build:prod)",
+      "Write(production/**/*)"
+    ]
+  },
+  "env": {
+    "ENVIRONMENT": "qa",
+    "TEST_MODE": "manual",
+    "ENABLE_TEST_FEATURES": "true",
+    "LOG_LEVEL": "debug"
+  }
+}

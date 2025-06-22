@@ -1,0 +1,42 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(**)",
+      "Edit(src/**/*.{js,jsx,ts,tsx,vue,svelte})",
+      "Edit(src/**/*.{css,scss,sass,less})",
+      "Edit(public/**/*)",
+      "Edit(assets/**/*)",
+      "Edit(components/**/*)",
+      "Edit(pages/**/*)",
+      "Edit(styles/**/*)",
+      "Edit(tests/**/*)",
+      "Edit(package.json)",
+      "Edit(package-lock.json)",
+      "Edit(yarn.lock)",
+      "Edit(webpack.config.js)",
+      "Edit(vite.config.js)",
+      "Edit(tailwind.config.js)",
+      "Bash(npm *)",
+      "Bash(yarn *)",
+      "Bash(pnpm *)",
+      "Bash(git *)",
+      "Bash(node *)",
+      "Bash(npx *)"
+    ],
+    "deny": [
+      "Edit(server/**/*)",
+      "Edit(backend/**/*)",
+      "Edit(api/**/*)",
+      "Edit(database/**/*)",
+      "Edit(.env.production)",
+      "Edit(secrets/**/*)",
+      "Bash(docker *)",
+      "Bash(kubectl *)",
+      "Bash(terraform *)"
+    ]
+  },
+  "env": {
+    "NODE_ENV": "development",
+    "FRONTEND_ONLY": "true"
+  }
+}

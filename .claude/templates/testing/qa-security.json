@@ -1,0 +1,37 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(**/*)",
+      "Edit(security-tests/**/*)",
+      "Edit(vulnerability-reports/**/*)",
+      "Create(security-reports/**/*)",
+      "Write(audit-logs/**/*)",
+      "Bash(npm audit)",
+      "Bash(npm audit fix)",
+      "Bash(snyk *)",
+      "Bash(zap *)",
+      "Bash(burp *)",
+      "Bash(nmap *)",
+      "Bash(nikto *)",
+      "Bash(sqlmap *)",
+      "Bash(bandit *)",
+      "Bash(semgrep *)",
+      "Bash(safety *)",
+      "Bash(trivy *)"
+    ],
+    "deny": [
+      "Edit(src/**/*)",
+      "Edit(package.json)",
+      "Edit(.env*)",
+      "Edit(secrets/**/*)",
+      "Bash(npm install *)",
+      "Bash(rm -rf security-reports)",
+      "Bash(rm -rf audit-logs)"
+    ]
+  },
+  "env": {
+    "NODE_ENV": "test",
+    "SECURITY_MODE": "true",
+    "AUDIT_LEVEL": "high"
+  }
+}

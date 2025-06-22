@@ -1,0 +1,30 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(src/**/*)",
+      "Read(docs/**/*)",
+      "Read(examples/**/*)",
+      "Read(README.md)",
+      "Bash(npm start)",
+      "Bash(npm run demo)",
+      "Bash(echo *)",
+      "Bash(cat README.md)",
+      "Bash(ls -la)"
+    ],
+    "deny": [
+      "Edit(*)",
+      "Create(*)",
+      "Write(*)",
+      "Bash(git *)",
+      "Bash(npm install *)",
+      "Bash(curl *)",
+      "Bash(wget *)",
+      "WebFetch(*)"
+    ]
+  },
+  "env": {
+    "DEMO_MODE": "true",
+    "READ_ONLY": "true",
+    "SAFE_MODE": "true"
+  }
+}
